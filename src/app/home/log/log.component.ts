@@ -1,5 +1,7 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { Details } from 'src/app/deatils.model';
+import { ServiceService } from 'src/app/service.service';
 
 @Component({
   selector: 'app-log',
@@ -8,12 +10,20 @@ import { NgForm } from '@angular/forms';
 })
 export class LOGComponent implements OnInit {
 
-    @ViewChild('myForm') form! :NgForm ;
-  constructor() { }
+  constructor(private service: ServiceService) { }
 
-  ngOnInit(): void {
+  onSubmit(form: NgForm) {
+    if (form.valid) {
+      const newDetails: Details = {
+        name: form.value.name,
+        email: form.value.email,
+        password: form.value.password,
+        cpassword: form.value.cpassword
+      };
+      this.service.addDetails(newDetails);
+      console.log(this.service.getDetails());
+    }
   }
-  onSubmit(){
-    console.log(this.form)
-  }
+
+  ngOnInit(): void {}
 }

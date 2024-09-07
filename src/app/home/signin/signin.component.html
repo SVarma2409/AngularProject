@@ -1,1 +1,31 @@
-<p>signin works!</p>
+<div class="body">
+    <div class="mainCon">
+    <form #myForm = "ngForm" (ngSubmit)="onSubmit()">
+      
+      <div>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" ngModel required>
+      </div>
+  
+      <div>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" ngModel required email>
+      </div>
+
+      <div>
+        <label for="password">Password:</label>
+        <input type="text" id="name" name="password" ngModel required>
+      </div>
+
+      
+  
+      <button type="submit" [disabled]="myForm.invalid">SignUp</button>
+      <hr>
+      <div class="signUp">
+       <span> Don't have a account</span> 
+       <a routerLink="/home/log"> SignUp</a>
+      </div>
+    </form>
+  </div>
+  <router-outlet></router-outlet>
+  </div>

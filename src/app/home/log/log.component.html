@@ -1,6 +1,6 @@
 <div class="body">
     <div class="mainCon">
-    <form #myForm = "ngForm" (ngSubmit)="onSubmit()">
+    <form #myForm = "ngForm" (ngSubmit)="onSubmit(myForm)">
       
       <div>
         <label for="name">Name:</label>
@@ -11,14 +11,25 @@
         <label for="email">Email:</label>
         <input type="email" id="email" name="email" ngModel required email>
       </div>
+
+      <div>
+        <label for="password">Create Password:</label>
+        <input type="text" id="name" name="password" ngModel required>
+      </div>
+
+      <div>
+        <label for="cpassword">Confirm Password:</label>
+        <input type="text" id="name" name="cpassword" ngModel required>
+      </div>
   
-      <button type="submit" [disabled]="myForm.invalid">SignUp</button>
+      <button type="submit" routerLink="/home/log/mainpage" [disabled]="myForm.invalid">SignUp</button>
+      
       <hr>
-      <div class="signUp">
+      <div class="signIn">
        <span> Already had one</span> 
-       <a routerLink="signUp"> SignIn</a>
+       <a routerLink="signIn"> SignIn</a>
       </div>
     </form>
   </div>
-  <router-outlet></router-outlet>
+  
   </div>

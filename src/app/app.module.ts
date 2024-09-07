@@ -8,6 +8,8 @@ import { ContactComponent } from './contact/contact.component';
 import { LOGComponent } from './home/log/log.component';
 import { FormsModule } from '@angular/forms';
 import { SigninComponent } from './home/signin/signin.component';
+import { ServiceService } from './service.service';
+import { MainPageComponent } from './main-page/main-page.component';
 
 @NgModule({
   declarations: [
@@ -16,14 +18,15 @@ import { SigninComponent } from './home/signin/signin.component';
     AboutComponent,
     ContactComponent,
     LOGComponent,
-    SigninComponent
+    SigninComponent,
+    MainPageComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
   ],
-  providers: [],
+  providers: [ServiceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
