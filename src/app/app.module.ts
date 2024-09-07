@@ -6,6 +6,8 @@ import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
 import { LOGComponent } from './home/log/log.component';
+import { FormsModule } from '@angular/forms';
+import { SigninComponent } from './home/signin/signin.component';
 
 @NgModule({
   declarations: [
@@ -13,11 +15,13 @@ import { LOGComponent } from './home/log/log.component';
     HomeComponent,
     AboutComponent,
     ContactComponent,
-    LOGComponent
+    LOGComponent,
+    SigninComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

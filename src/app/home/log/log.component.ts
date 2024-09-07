@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-log',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LOGComponent implements OnInit {
 
+    @ViewChild('myForm') form! :NgForm ;
   constructor() { }
 
   ngOnInit(): void {
   }
-
+  onSubmit(){
+    console.log(this.form)
+  }
 }

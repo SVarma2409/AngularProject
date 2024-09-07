@@ -3,7 +3,9 @@ nav {
     padding: 10px 0;
     position: relative;
     display: flex;
-    justify-content: center;
+    justify-content:space-evenly;
+    flex-direction: row;
+    
 
 }
 nav a {
