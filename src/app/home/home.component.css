@@ -1,0 +1,57 @@
+*{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.homeDiv,.descDiv{
+    text-align: center;
+}
+.homeDiv{
+    width: 100%;
+    
+}
+.homeDiv p {
+    font-size: 28px;
+    border: solid 2px black;
+    color: black;
+    font-weight: bold;
+}
+.descDiv{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+
+}
+.description{
+    font-size: 16px;
+    margin: 0 25%;
+    
+    
+}
+
+.descDiv2 button{
+    
+        color: rgb(49, 48, 48);
+        padding: 14px 20px;
+        text-decoration: none;
+        text-align: center;
+        display: inline-block;
+        margin: 20px 20px;
+        border: solid 2px rgb(0, 0, 0);
+        font-size: 16px;
+        font-weight: bold;
+        background-color: rgb(38, 250, 134);
+        border-radius: 6px;
+
+
+    
+}
+.descDiv2 button:hover{
+        background-color: rgb(49, 48, 48);
+        box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.5);
+        color: rgb(38, 250, 134);
+        border: solid 2px rgb(38, 250, 134);;
+        transition: background-color 0.5s, color 0.3s, box-shadow 0.3s;
+        cursor: pointer;
+        
+    }
