@@ -7,11 +7,5 @@ import { Details } from './deatils.model'
 export class ServiceService {
   private details: Details[] = [];
 
-  addDetails(detail: Details) {
-    this.details.push(detail);
-  }
-
-  getDetails(): Details[] {
-    return this.details;
-  }
+  
 }
